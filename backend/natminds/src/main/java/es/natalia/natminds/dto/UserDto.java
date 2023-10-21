@@ -21,4 +21,5 @@ public class UserDto {
     private String email;
     @NotBlank
     private String password;
+    private String biography;
 }

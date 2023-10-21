@@ -17,4 +17,5 @@ public class UserDtoUpdate {
     private String email;
     @NotBlank
     private String password;
+    private String biography;
 }

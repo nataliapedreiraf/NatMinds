@@ -9,9 +9,8 @@ import java.time.Instant;
 
 @Data
 public class CommentDtoPartialUpdate {
-    @NotBlank
+    @JsonProperty("comment_text")
     private String commentText;
-    @NotNull
     @JsonProperty("comment_date")
     private Instant commentDate;
 }

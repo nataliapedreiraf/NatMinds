@@ -1,9 +1,10 @@
-package es.natalia.natminds.service;
+package es.natalia.natminds.serviceImpl;
 
 import es.natalia.natminds.dto.PostDto;
 import es.natalia.natminds.mapper.PostMapper;
 import es.natalia.natminds.model.Post;
 import es.natalia.natminds.repository.PostRepository;
+import es.natalia.natminds.service.PostService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
@@ -17,7 +18,7 @@ import static es.natalia.natminds.specification.PostSpecifications.*;
 
 @Service
 @Transactional
-public class PostServiceImpl implements PostService{
+public class PostServiceImpl implements PostService {
 
     @Autowired
     PostRepository postRepository;

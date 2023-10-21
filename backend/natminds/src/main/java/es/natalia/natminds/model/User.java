@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+import org.hibernate.validator.constraints.UniqueElements;
 
 @Data
 @Entity
@@ -24,5 +25,8 @@ public class User {
     private String email;
     @NotBlank
     private String password;
+    private String biography;
+
+
 }
 

@@ -12,13 +12,17 @@ import java.time.Instant;
 
 @Data
 public class CommentDto {
+    @JsonProperty("comment_id")
     private Long commentId;
     @NotNull
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @JsonProperty("user_id")
     private User userId;
     @NotNull
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @JsonProperty("post_id")
     private Post postId;
+    @JsonProperty("comment_text")
     @NotBlank
     private String commentText;
     @NotNull

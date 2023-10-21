@@ -29,4 +29,10 @@ public class UserSpecification {
             return builder.like(root.get("email"), "%" + email + "%");
         };
     }
+
+    public static Specification<User> byBiography(String biography) {
+        return (root, query, builder) -> {
+            return builder.like(root.get("biography"), "%" + biography + "%");
+        };
+    }
 }

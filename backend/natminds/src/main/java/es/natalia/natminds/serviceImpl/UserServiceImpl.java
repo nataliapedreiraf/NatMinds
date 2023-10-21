@@ -1,9 +1,10 @@
-package es.natalia.natminds.service;
+package es.natalia.natminds.serviceImpl;
 
 import es.natalia.natminds.dto.UserDto;
 import es.natalia.natminds.mapper.UserMapper;
 import es.natalia.natminds.model.User;
 import es.natalia.natminds.repository.UserRepository;
+import es.natalia.natminds.service.UserService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
@@ -17,7 +18,7 @@ import static es.natalia.natminds.specification.UserSpecification.*;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository userRepository;
@@ -81,11 +82,12 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public List<UserDto> findUsers(String name, String lastName, String userName, String email) {
+    public List<UserDto> findUsers(String name, String lastName, String userName, String email, String biography) {
         Specification<User> filters = Specification.where(name == null ? null : byName(name))
                 .and(lastName == null ? null : byLastName(lastName))
                 .and(userName == null ? null : byUserName(userName))
-                .and((email == null) ? null : byEmail(email));
+                .and((email == null) ? null : byEmail(email))
+                .and((biography == null) ? null : byBiography(biography));
 
 
         return userRepository.findAll(filters)

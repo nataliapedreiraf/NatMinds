@@ -65,9 +65,10 @@ public class UserController {
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String lastName,
             @RequestParam(required = false) String userName,
-            @RequestParam(required = false) String email){
+            @RequestParam(required = false) String email,
+            @RequestParam(required = false) String biography){
 
-        return  userService.findUsers(name, lastName, userName, email);
+        return  userService.findUsers(name, lastName, userName, email, biography);
     }
 
 }

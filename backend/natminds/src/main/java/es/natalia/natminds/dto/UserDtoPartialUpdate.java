@@ -12,4 +12,5 @@ public class UserDtoPartialUpdate {
     @Email
     private String email;
     private String password;
+    private String biography;
 }

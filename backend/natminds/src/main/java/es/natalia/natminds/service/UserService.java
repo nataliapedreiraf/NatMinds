@@ -13,5 +13,5 @@ public interface UserService {
     public User createUser(User user);
     public void removeUser(Long userId);
     public List<User> findAll();
-    List<UserDto> findUsers(String name, String lastName, String userName, String email);
+    List<UserDto> findUsers(String name, String lastName, String userName, String email, String biography);
 }

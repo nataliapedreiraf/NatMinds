@@ -1,9 +1,10 @@
-package es.natalia.natminds.service;
+package es.natalia.natminds.serviceImpl;
 
 import es.natalia.natminds.dto.CommentDto;
 import es.natalia.natminds.mapper.CommentMapper;
 import es.natalia.natminds.model.Comment;
 import es.natalia.natminds.repository.CommentRepository;
+import es.natalia.natminds.service.CommentService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
@@ -18,7 +19,7 @@ import static es.natalia.natminds.specification.CommentSpecifications.*;
 
 @Service
 @Transactional
-public class CommentServiceImpl implements CommentService{
+public class CommentServiceImpl implements CommentService {
 
     @Autowired
     CommentRepository commentRepository;
