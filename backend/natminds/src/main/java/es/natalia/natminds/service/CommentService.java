@@ -6,6 +6,8 @@ import javax.management.InstanceNotFoundException;
 import java.time.Instant;
 import java.util.List;
 
+/*Creamos la interfaz Service para el Comment. Aquí especificamos todos los métodos que vamos a necesitar para la
+ * lógica de negocio.*/
 public interface CommentService {
     public Comment getComment(Long commentId);
 

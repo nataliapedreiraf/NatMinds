@@ -2,21 +2,19 @@ package es.natalia.natminds.rest;
 
 import es.natalia.natminds.dto.*;
 import es.natalia.natminds.mapper.CommentMapper;
-import es.natalia.natminds.mapper.PostMapper;
 import es.natalia.natminds.model.Comment;
-import es.natalia.natminds.model.Post;
 import es.natalia.natminds.service.CommentService;
-import es.natalia.natminds.service.PostService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.management.InstanceNotFoundException;
 import java.time.Instant;
 import java.util.List;
 
+/*Creamos el controlador del comment. Aquí definiremos todos los endpoints que necesitamos para el funcionamiento de
+ * nuestra aplicación.*/
 @RestController
 public class CommentController {
     @Autowired

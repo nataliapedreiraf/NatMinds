@@ -9,10 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.management.InstanceNotFoundException;
 import java.util.List;
 
+/*Creamos el controlador del post. Aquí definiremos todos los endpoints que necesitamos para el funcionamiento de
+ * nuestra aplicación.*/
 @RestController
 public class PostController {
     @Autowired

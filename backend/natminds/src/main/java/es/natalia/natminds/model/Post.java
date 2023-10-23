@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+
+/*Creamos la clase Post con sus correspondientes atributos. Esta clase va a generar nuestra tabla en la BBDD.
+ * Con @Data se generan automáticamente Getters/Setters, toString, EqualsAndHashCode y RequiredArgsConstructor. */
+
 @Data
 @Entity
 @Table(name = "post")

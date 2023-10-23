@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-import org.hibernate.validator.constraints.UniqueElements;
+
+/*Creamos la clase User con sus correspondientes atributos. Esta clase va a generar nuestra tabla en la BBDD.
+* Con @Data se generan automáticamente Getters/Setters, toString, EqualsAndHashCode y RequiredArgsConstructor. */
 
 @Data
 @Entity

@@ -1,12 +1,13 @@
 package es.natalia.natminds.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
 import java.time.Instant;
 
+/*DTO para la funcionalidad de Partial Update (@PATCH)
+ *
+ * En este caso CommentDtoPartialUpdate tendrá los atributos text y date, ya que es lo único que nos podría interesar
+ * modificar */
 @Data
 public class CommentDtoPartialUpdate {
     @JsonProperty("comment_text")

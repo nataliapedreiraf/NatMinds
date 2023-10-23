@@ -2,8 +2,10 @@ package es.natalia.natminds.mapper;
 
 import es.natalia.natminds.dto.*;
 import es.natalia.natminds.model.Post;
-import es.natalia.natminds.model.User;
 import org.mapstruct.Mapper;
+
+/*Creamos la clase PostMapper para hacer las transformaciones entre la clase Post y sus respectivas clases DTO
+ * utilizando mapstruct*/
 
 @Mapper(componentModel = "spring")
 public interface PostMapper {

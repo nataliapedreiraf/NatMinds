@@ -1,21 +1,18 @@
 package es.natalia.natminds.rest;
 
 import es.natalia.natminds.dto.*;
-import es.natalia.natminds.mapper.CommentMapper;
 import es.natalia.natminds.mapper.LikeMapper;
-import es.natalia.natminds.model.Comment;
 import es.natalia.natminds.model.Like;
-import es.natalia.natminds.service.CommentService;
 import es.natalia.natminds.service.LikeService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import javax.management.InstanceNotFoundException;
-import java.time.Instant;
 import java.util.List;
 
+/*Creamos el controlador del like. Aquí definiremos todos los endpoints que necesitamos para el funcionamiento de
+ * nuestra aplicación.*/
 @RestController
 public class LikeController {
     @Autowired

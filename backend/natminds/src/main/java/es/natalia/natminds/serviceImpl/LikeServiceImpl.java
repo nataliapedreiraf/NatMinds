@@ -1,28 +1,21 @@
 package es.natalia.natminds.serviceImpl;
 
 import es.natalia.natminds.dto.LikeDto;
-import es.natalia.natminds.mapper.CommentMapper;
 import es.natalia.natminds.mapper.LikeMapper;
-import es.natalia.natminds.model.Comment;
 import es.natalia.natminds.model.Like;
-import es.natalia.natminds.model.User;
-import es.natalia.natminds.repository.CommentRepository;
 import es.natalia.natminds.repository.LikeRepository;
 import es.natalia.natminds.service.LikeService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
-
-import static es.natalia.natminds.specification.CommentSpecifications.*;
-import static es.natalia.natminds.specification.CommentSpecifications.byCommentDate;
 import static es.natalia.natminds.specification.LikeSpecifications.byLikePostId;
 import static es.natalia.natminds.specification.LikeSpecifications.byLikeUserId;
 
-
+/*Creamos la implementación del service like. Aquí tendremos la lógica de negocio y especificamos que tiene que hacer
+ * cada uno de los métodos que vamos a utilizar.*/
 @Service
 @Transactional
 public class LikeServiceImpl implements LikeService {

@@ -9,13 +9,13 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
 import javax.management.InstanceNotFoundException;
 import java.util.List;
 import java.util.Optional;
-
 import static es.natalia.natminds.specification.UserSpecification.*;
 
+/*Creamos la implementación del service user. Aquí tendremos la lógica de negocio y especificamos que tiene que hacer
+* cada uno de los métodos que vamos a utilizar.*/
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {

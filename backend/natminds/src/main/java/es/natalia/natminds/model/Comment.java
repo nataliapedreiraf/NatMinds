@@ -7,7 +7,8 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import java.time.Instant;
 
-
+/*Creamos la clase Comment con sus correspondientes atributos. Esta clase va a generar nuestra tabla en la BBDD.
+ * Con @Data se generan automáticamente Getters/Setters, toString, EqualsAndHashCode y RequiredArgsConstructor. */
 @Data
 @Entity
 @Table(name = "comment")

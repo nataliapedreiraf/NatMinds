@@ -7,7 +7,9 @@ import es.natalia.natminds.model.User;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
-
+/*DTO para la funcionalidad de Create (@GET)
+ *
+ * En este caso LikeDto tendrá los mismos atributos que la clase Like, ya que queremos recuperar todos los campos. */
 @Data
 public class LikeDto {
     @JsonProperty("like_id")

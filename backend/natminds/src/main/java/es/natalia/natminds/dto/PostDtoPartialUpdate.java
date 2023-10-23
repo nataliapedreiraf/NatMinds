@@ -1,9 +1,11 @@
 package es.natalia.natminds.dto;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
+/*DTO para la funcionalidad de Partial Update (@PATCH)
+ *
+ * En este caso PostDtoPartialUpdate sólo tendrá el atributo text, ya que es lo único que nos podría interesar
+ * modificar */
 @Data
 public class PostDtoPartialUpdate {
     private String text;

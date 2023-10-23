@@ -7,9 +7,11 @@ import es.natalia.natminds.model.User;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
 import java.time.Instant;
 
+/*DTO para la funcionalidad de Create (@GET)
+ *
+ * En este caso CommentDto tendrá los mismos atributos que la clase Comment, ya que queremos recuperar todos los campos. */
 @Data
 public class CommentDto {
     @JsonProperty("comment_id")

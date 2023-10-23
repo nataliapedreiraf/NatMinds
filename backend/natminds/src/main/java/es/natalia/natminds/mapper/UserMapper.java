@@ -7,6 +7,9 @@ import es.natalia.natminds.dto.UserDtoUpdate;
 import es.natalia.natminds.model.User;
 import org.mapstruct.Mapper;
 
+/*Creamos la clase UserMapper para hacer las transformaciones entre la clase User y sus respectivas clases DTO
+* utilizando mapstruct*/
+
 @Mapper(componentModel = "spring")
 public interface UserMapper {
 

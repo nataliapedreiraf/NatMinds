@@ -5,6 +5,9 @@ import org.springframework.data.jpa.domain.Specification;
 
 import java.time.Instant;
 
+/*Creamos la clase Specification para el comment. Aquí vamos a definir una serie de especificaciones que luego usaremos
+ * para poder hacer búsquedas filtradas por atributos. Utilizamos funciones lambda para definir aquello por lo que
+ * vamos a querer filtrar y que por tanto necesitaremos comparar con la información que hay en BBDD.*/
 public class CommentSpecifications {
     public CommentSpecifications(){}
 
