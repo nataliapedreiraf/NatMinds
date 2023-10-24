@@ -12,7 +12,7 @@ public interface PostService {
 
     public Post createPost(Post post);
     public void removePost(Long postId);
-    public List<Post> findAll();
+
     List<PostDto> findPosts(Long userId, String text);
 
     public void partialUpdatePost(Long postId, Post post) throws InstanceNotFoundException;

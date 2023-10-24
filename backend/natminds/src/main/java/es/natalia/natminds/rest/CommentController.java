@@ -34,12 +34,6 @@ public class CommentController {
         return new ResponseEntity<>(commentMapper.commentToDto(commentService.getComment(commentId)), HttpStatus.OK);
     }
 
-    @GetMapping("/comments/all")
-    public List<Comment> getAllComments(){
-        return commentService.findAll();
-    }
-
-
 
     @DeleteMapping("/comments/{commentId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

@@ -36,10 +36,6 @@ public class UserController {
         return new ResponseEntity<>(userMapper.userToDto(userService.getUser(userId)), HttpStatus.OK);
     }
 
-    @GetMapping("/users/all")
-    public List<User> getAllUsers(){
-        return userService.findAll();
-    }
 
     @PutMapping("/users/{userId}")
     public ResponseEntity<UserDto> updateUser(@PathVariable Long userId, @RequestBody @Valid UserDtoUpdate userDtoUpdate) throws InstanceNotFoundException {

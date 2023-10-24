@@ -13,6 +13,5 @@ public interface UserService {
     public void partialUpdateUser(Long userId, User user) throws InstanceNotFoundException;
     public User createUser(User user);
     public void removeUser(Long userId);
-    public List<User> findAll();
     List<UserDto> findUsers(String name, String lastName, String userName, String email, String biography);
 }

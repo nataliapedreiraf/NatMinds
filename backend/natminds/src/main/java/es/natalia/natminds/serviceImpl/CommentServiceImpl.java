@@ -41,10 +41,7 @@ public class CommentServiceImpl implements CommentService {
         commentRepository.deleteById(commentId);
     }
 
-    @Override
-    public List<Comment> findAll() {
-        return commentRepository.findAll();
-    }
+
 
     @Override
     public List<CommentDto> findComments(Long postId, Long userId, String commentText, Instant commentDate) {

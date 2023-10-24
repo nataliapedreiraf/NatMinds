@@ -33,12 +33,6 @@ public class PostController {
         return new ResponseEntity<>(postMapper.postToDto(postService.getPost(postId)), HttpStatus.OK);
     }
 
-    @GetMapping("/posts/all")
-    public List<Post> getAllPosts(){
-        return postService.findAll();
-    }
-
-
 
     @DeleteMapping("/posts/{postId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

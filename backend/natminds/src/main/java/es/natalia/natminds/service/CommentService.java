@@ -13,7 +13,7 @@ public interface CommentService {
 
     public Comment createComment(Comment comment);
     public void removeComment(Long commentId);
-    public List<Comment> findAll();
+
     List<CommentDto> findComments(Long postId, Long userId, String commentText, Instant commentDate);
 
     public void partialUpdateComment(Long commentId, Comment comment) throws InstanceNotFoundException;

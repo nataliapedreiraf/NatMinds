@@ -44,11 +44,7 @@ public class PostServiceImpl implements PostService {
         postRepository.deleteById(postId);
     }
 
-    @Override
-    public List<Post> findAll() {
 
-        return postRepository.findAll();
-    }
 
     @Override
     public List<PostDto> findPosts(Long userId, String text) {

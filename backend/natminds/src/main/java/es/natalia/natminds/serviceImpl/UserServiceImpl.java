@@ -64,6 +64,9 @@ public class UserServiceImpl implements UserService {
         if(newUser.getPassword() != null){
             user.setPassword(newUser.getPassword());
         }
+        if(newUser.getBiography() != null){
+            user.setBiography(newUser.getBiography());
+        }
     }
 
     @Override
@@ -76,10 +79,7 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(userId);
     }
 
-    @Override
-    public List<User> findAll() {
-        return userRepository.findAll();
-    }
+
 
     @Override
     public List<UserDto> findUsers(String name, String lastName, String userName, String email, String biography) {
