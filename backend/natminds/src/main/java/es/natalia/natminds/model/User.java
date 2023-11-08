@@ -42,6 +42,7 @@ public class User {
     )
     List<User> followed = new ArrayList<>();
 
+
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
             name = "follow",

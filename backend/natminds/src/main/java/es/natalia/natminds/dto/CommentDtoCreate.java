@@ -15,9 +15,9 @@ import java.time.Instant;
 @Data
 public class CommentDtoCreate {
     @NotNull
-    private User userId;
+    private Long userId;
     @NotNull
-    private Post postId;
+    private Long postId;
     @NotBlank
     private String commentText;
     @NotNull

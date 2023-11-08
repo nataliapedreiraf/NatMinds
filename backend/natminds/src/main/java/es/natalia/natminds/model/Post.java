@@ -23,6 +23,7 @@ public class Post {
     //@NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId")
+    @MapsId("userId")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private User userId;
     @NotBlank
@@ -34,5 +35,5 @@ public class Post {
             joinColumns = { @JoinColumn(name = "post_id") },
             inverseJoinColumns = { @JoinColumn(name = "user_id") }
     )
-    List<User> users = new ArrayList<>();
+    List<User> likes = new ArrayList<>();
 }

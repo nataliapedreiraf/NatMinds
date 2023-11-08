@@ -14,7 +14,7 @@ public class PostDto {
     private Long postId;
     @NotNull
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private User userId;
+    private Long userId;
     @NotBlank
     private String text;
 

@@ -19,11 +19,11 @@ public class CommentDto {
     @NotNull
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @JsonProperty("user_id")
-    private User userId;
+    private Long userId;
     @NotNull
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @JsonProperty("post_id")
-    private Post postId;
+    private Long postId;
     @JsonProperty("comment_text")
     @NotBlank
     private String commentText;
