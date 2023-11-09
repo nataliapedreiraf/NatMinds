@@ -24,6 +24,7 @@ public class PostServiceImpl implements PostService {
     PostRepository postRepository;
     @Autowired
     PostMapper postMapper;
+    private Post post;
     
     @Override
     public Post getPost(Long postId) {
@@ -50,6 +51,8 @@ public class PostServiceImpl implements PostService {
     public List<PostDto> findPosts(Long userId, String text) {
         Specification<Post> filters = Specification.where(userId == null ? null : byPostUserId(userId))
                 .and(text == null ? null : byPostText(text));
+
+
 
 
         return postRepository.findAll(filters)

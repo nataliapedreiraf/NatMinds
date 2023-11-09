@@ -5,6 +5,8 @@ import es.natalia.natminds.apiRest.dto.PostDtoCreate;
 import es.natalia.natminds.apiRest.dto.PostDtoPartialUpdate;
 import es.natalia.natminds.apiRest.mapper.PostMapper;
 import es.natalia.natminds.apiModel.service.PostService;
+import es.natalia.natminds.model.model.Post;
+import es.natalia.natminds.model.model.User;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,20 +20,36 @@ import java.util.List;
 @RestController
 public class PostController {
     @Autowired
-    private PostMapper postMapper;
-    @Autowired
     private PostService postService;
+
+    private Post post;
 
     // POST
     @PostMapping("/posts")
     public ResponseEntity<PostDto> createPost(@RequestBody @Valid PostDtoCreate postDtoCreate){
-        postService.createPost(postMapper.dtoCreateToPost(postDtoCreate));
+        Post post = new Post();
+
+        User user = new User();
+        user.setUserId(postDtoCreate.getUserId());
+        post.setUserId(user);
+
+        post.setText(postDtoCreate.getText());
+
+        postService.createPost(post);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping("/posts/{postId}")
     public ResponseEntity<PostDto> getPost(@PathVariable Long postId) {
-        return new ResponseEntity<>(postMapper.postToDto(postService.getPost(postId)), HttpStatus.OK);
+
+        PostDto postDto = new PostDto();
+        postDto.setPostId(post.getPostId());
+        postDto.setUserId(post.getUserId().getUserId());
+        postDto.setText(post.getText());
+
+        postService.getPost(postId);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 
@@ -53,7 +71,10 @@ public class PostController {
     @PatchMapping("/posts/{postId}")
     public ResponseEntity<PostDto> postPartialUpdate(@PathVariable Long postId,
                                                      @RequestBody @Valid PostDtoPartialUpdate postDtoPartialUpdate) throws InstanceNotFoundException {
-        postService.partialUpdatePost(postId, postMapper.dtoPartialUpdateToPost(postDtoPartialUpdate));
+        Post post = new Post();
+        post.setText(postDtoPartialUpdate.getText());
+
+        postService.partialUpdatePost(postId, post);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }
