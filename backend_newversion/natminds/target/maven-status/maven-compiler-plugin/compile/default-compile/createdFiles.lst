@@ -1,0 +1,13 @@
+es\natalia\natminds\model\service\PostServiceImpl.class
+es\natalia\natminds\model\model\PostSpecifications.class
+es\natalia\natminds\model\model\User.class
+es\natalia\natminds\apiModel\service\UserService.class
+es\natalia\natminds\model\model\PostRepository.class
+es\natalia\natminds\model\repository\UserSpecification.class
+es\natalia\natminds\apiModel\service\PostService.class
+es\natalia\natminds\NatmindsApplication.class
+es\natalia\natminds\apiRest\rest\UserController.class
+es\natalia\natminds\model\model\Post.class
+es\natalia\natminds\apiRest\rest\PostController.class
+es\natalia\natminds\model\service\UserServiceImpl.class
+es\natalia\natminds\model\repository\UserRepository.class
