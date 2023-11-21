@@ -52,4 +52,7 @@ public class PostServiceImpl implements PostService {
         return postRepository.findByUserUserId(userId);
     }
 
+    @Override
+    public List<Post> findAll() {return postRepository.findAll();}
+
 }

@@ -12,4 +12,6 @@ public interface UserService {
     public User createUser(User user);
     public void removeUser(Long userId);
     public List<User> findUsers(String name, String lastName, String userName, String email, String biography);
+
+    public User authenticateUser(String email, String password);
 }

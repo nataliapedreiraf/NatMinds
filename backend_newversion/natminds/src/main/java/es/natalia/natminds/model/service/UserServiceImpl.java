@@ -90,4 +90,13 @@ public class UserServiceImpl implements UserService {
                 .stream()
                 .toList();
     }
+@Override
+    public User authenticateUser(String email, String password) {
+        // Implementa la lógica para verificar las credenciales del usuario
+        // Puedes utilizar el UserRepository para buscar el usuario por email y contraseña
+        Optional<User> optionalUser = userRepository.findByEmailAndPassword(email, password);
+
+        // Devuelve el usuario si existe y las credenciales son válidas
+        return optionalUser.orElse(null);
+    }
 }

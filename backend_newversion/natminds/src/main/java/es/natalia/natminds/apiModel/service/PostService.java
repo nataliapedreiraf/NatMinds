@@ -9,4 +9,5 @@ public interface PostService {
     public Post createPost(Post post);
     public void removePost(Long postId);
     List<Post> findByUserUserId(Long userId);
+    public List<Post> findAll();
 }

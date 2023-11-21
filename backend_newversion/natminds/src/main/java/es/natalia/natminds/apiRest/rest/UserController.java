@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.management.InstanceNotFoundException;
 import java.util.List;
-
+@CrossOrigin
 @RestController
 public class UserController {
     @Autowired
@@ -58,5 +58,16 @@ public class UserController {
             @RequestParam(required = false) String biography){
 
         return  userService.findUsers(name, lastName, userName, email, biography);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<User> login(@RequestBody @Valid User user) {
+        User authenticatedUser = userService.authenticateUser(user.getEmail(), user.getPassword());
+
+        if (authenticatedUser != null) {
+            return new ResponseEntity<>(authenticatedUser, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+        }
     }
 }
